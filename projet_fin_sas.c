@@ -37,7 +37,14 @@ DB animaux_data[max_especes]=
 {
     {0, "lion", {"Savane","Jungle"}, 2, 16, 200, "carnivore"},
     {1, "tigre", {"Savane","Jungle"}, 2, 26, 300, "carnivore"},
-    {2, "girafe", {"Savane","Jungle"}, 2, 25, 1400, "herbivore"}
+    {2, "girafe", {"Savane","Jungle"}, 2, 25, 1400, "herbivore"},
+    {3, "elephant", {"Savane","Jungle","Plaine"}, 3, 70, 10000, "herbivore"},
+    {4, "aigle", {"Montagne","Jungle"}, 2, 30, 8, "carnivore"},
+    {5, "zebre", {"Savane","Plaine"}, 2, 25, 400, "herbivore"},
+    {6, "Pingouin", {"Antarctique","Ocean"}, 2, 20, 1, "carnivore"},
+    {7, "Crocodile", {"Riviere","Marecage"}, 2, 60, 1000, "carnivore"},
+    {8, "Kangourou", {"Desert","Plaine"}, 2, 23, 90, "herbivore"},
+    {9, "Hibou", {"Jungle","Montagne"}, 2, 20, 2, "carnivore"}
 };
 
 int menu();
@@ -76,12 +83,13 @@ void trier(int []);
 
 
 
-char habitats[max_habitats][taille]={"Savane", "Jungle"};
+char habitats[max_habitats][taille]={"Savane", "Jungle","Plaine", "Montagne", "Antarctique", "Ocean", "Riviere", 
+"Marecage", "Desert"};
 
-int nbr_espece=3;
-int nbr_animaux=0;
-int id_generateur=0;
-int nbr_habitat=2;
+int nbr_espece=10;
+int nbr_animaux=20;
+int id_generateur=20;
+int nbr_habitat=9;
 animal animaux[max_animaux];
 
 
